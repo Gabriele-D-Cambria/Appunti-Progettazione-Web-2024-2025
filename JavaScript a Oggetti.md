@@ -635,7 +635,7 @@ console.log(v);
 
 Una lista dei metodi principali per gli array:
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |    Metodo    |                 Argomenti                 |                                                                                                               Descrizione                                                                                                               |
@@ -788,7 +788,7 @@ Esistono quattro modi per creare un oggetto `Date`:
 
 Alcuni metodi utili sono i seguenti:
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 |          Metodo          | Descrizione                                                                                               | Range Ritorno             |
 | :----------------------: | :-------------------------------------------------------------------------------------------------------- | :------------------------ | -------- |
@@ -820,7 +820,7 @@ Alcuni metodi utili sono i seguenti:
 |     `toUTCString()`      | Ritorna il `datetime` in una stringa in accordo all'_Universal Time Convention_                           | -                         |
 |       `valueOf()`        | Ritorna il valore primitivo di un `Date` object                                                           |                           |
 
-</span></div>
+</div>
 
 ```js
 let d = new Date();
@@ -842,7 +842,7 @@ let piGreco = Math.PI;
 let radiceQ = Math.sqrt(16);
 ```
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 |       Metodo       | Descrizione                                                                            |
 | :----------------: | :------------------------------------------------------------------------------------- |
@@ -873,7 +873,7 @@ let radiceQ = Math.sqrt(16);
 |     `floor(x)`     | Restituisce $\lfloor x\rfloor$                                                         |
 |     `random()`     | Restituisce un numero casuale $0 \le x < 1$                                            |
 
-</span></div>
+</div>
 
 ### 2.1.8. Number
 
@@ -884,7 +884,7 @@ E' utilizzato in due modi:
 
 L'oggetto `Number` ha delle proprietà riguardanti le **costanti numeriche**:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |      Proprietà      | Descrizione                                                 |
 | :-----------------: | :---------------------------------------------------------- |
@@ -893,11 +893,11 @@ L'oggetto `Number` ha delle proprietà riguardanti le **costanti numeriche**:
 | `NEGATIVE_INFINITY` | Rappresenta il valore $\infty$, ottenuto negli _overflow_   |
 | `POSITIVE_INFINITY` | Rappresenta il valore $-\infty$, ottenuto negli _overflow_  |
 
-</span></div>
+</div>
 
 Alcuni metodi utili:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |       Metodo       | Descrizione                                               | Argomenti                                                                                                               |
 | :----------------: | :-------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
@@ -909,7 +909,7 @@ Alcuni metodi utili:
 |  `parseInt(str)`   | Restituisce un intero a partire dalla stringa `str`       | `str`: stringa contenente un numero                                                                                     |
 | `parseFloat(str)`  | Restituisce un float a partire dalla stringa `str`        | `str`: stringa contenente un numero                                                                                     |
 
-</span></div>
+</div>
 
 ```js
 let num = new Number(13.3714);
@@ -1001,7 +1001,7 @@ const s6 = "" + o;
 
 Come per tutti gli altri oggetti anche `String` ha una serie di metodi utili:
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 |      Metodo       | Descrizione                                 | Argomenti |
 | :---------------: | :------------------------------------------ | :-------- |
@@ -1016,7 +1016,7 @@ Come per tutti gli altri oggetti anche `String` ha una serie di metodi utili:
 |        ``         |                                             | /         |
 |    `valueOf()`    | Restituisce il valore dello `String` object | /         |
 
-</span></div>
+</div>
 
 ```js
 let str = "Hello world!";
@@ -1075,7 +1075,7 @@ Per quanto riguarda i metodi invece:
 
 Le espressioni più comuni sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |     Espressione      | Descrizione                                                                  |
 | :------------------: | :--------------------------------------------------------------------------- |
@@ -1088,11 +1088,11 @@ Le espressioni più comuni sono:
 |        `adgk`        | Trova la sequenza di caratteri specificata                                   |
 | `(red\|blue\|green)` | Trova una qualsiasi delle alternative specificate                            |
 
-</span></div>
+</div>
 
 I _metacaratteri_ più utilizzati sono invece:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Metacarattere | Descrizione                                                            |
 | :-----------: | :--------------------------------------------------------------------- |
@@ -1115,11 +1115,11 @@ I _metacaratteri_ più utilizzati sono invece:
 |    `\xdd`     | Trova il carattere specificato da un numero esadecimale `0xdd`         |
 |   `\uxxxx`    | Trova il carattere Unicode specificato da un numero esadecimale `xxxx` |
 
-</span></div>
+</div>
 
 Sono presenti anche dei _quantificatori_. Essi ci permettono di dire quanti match sono necessari per ottenere un **match valido**
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Quantificatore | Descrizione                                                                                  |
 | :------------: | :------------------------------------------------------------------------------------------- |
@@ -1134,7 +1134,7 @@ Sono presenti anche dei _quantificatori_. Essi ci permettono di dire quanti matc
 |     `?=n`      | Corrisponde a qualsiasi stringa che **è seguita da una specifica stringa** `n`               |
 |     `?!n`      | Corrisponde a qualsiasi stringa che **non è seguita da una specifica stringa** `n`           |
 
-</span></div>
+</div>
 
 ```js
 let s1 = "10, 200, 2000, 10000 or 3000000?";
@@ -1164,7 +1164,7 @@ Il JS implementa delle proprietà globali e delle funzione che possono essere ut
 
 Tra le proprietà troviamo:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |  Proprietà  | Descrizione                                      |
 | :---------: | :----------------------------------------------- |
@@ -1172,11 +1172,11 @@ Tra le proprietà troviamo:
 |    `NaN`    | _Not-a-Number_                                   |
 | `undefined` | La variabile non ha un valore assegnato          |
 
-</span></div>
+</div>
 
 Tra le funzioni invece abbiamo:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |        Funzione        | Descrizione                                                                                                                                                                                                                                               |
 | :--------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1190,7 +1190,7 @@ Tra le funzioni invece abbiamo:
 |     `parseFloat()`     | Analizza una stringa e restituisce un numero in virgola mobile.                                                                                                                                                                                           |
 |      `parseInt()`      | Analizza una stringa e restituisce un numero intero.                                                                                                                                                                                                      |
 
-</span></div>
+</div>
 
 ```js
 eval("x=10;y=20;console.log(x*y)");
@@ -1480,7 +1480,7 @@ Infatti è adesso riferito al contesto lessicale nel quale si trova.
 
 ### 2.2.3. Funzioni predefinite
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |         Nome Funzione         |                                         Descrizione                                          | Esempio                                                                 |       Output        |
@@ -1632,7 +1632,7 @@ Un nodo rappresenta un elemento HTML contanuto tra `<>` e `</>`
 
 Alcune proprietà essenziali dei nodi sono:
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |    Proprietà     |             Descrizione             |
@@ -1682,7 +1682,7 @@ Esistono altri due metodi più moderni:
 
 Ci sono alacune proprietà dei nodi che sono <u>**essenziali**</u>:
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |   Proprietà   |                                                    Descrizione                                                     |
@@ -1700,7 +1700,7 @@ Ci sono alacune proprietà dei nodi che sono <u>**essenziali**</u>:
 
 Altre proprietà invece sono specifiche per alcuni tag:
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 | Proprietà |                   Descrizione                    |                    Tag                     |
@@ -1822,7 +1822,7 @@ E' tutta via preferibile cambiare lo stile non tramite l'attributo `style`, ma t
 Abbiamo già detto che la proprietà `innerHTML` è fortemente scoraggiata.
 Invece è consigliato l'utilizzo in combinazione di `textContent` e _metodi di manipolazione_
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |         Metodo          |                                       Descrizione                                        |
@@ -1837,7 +1837,7 @@ Invece è consigliato l'utilizzo in combinazione di `textContent` e _metodi di m
 |      `removeChild`      |                           Rimuove un figlio dal nodo corrente                            |
 |     `replaceChild`      |                          Sotituisce un figlio dal nodo corrente                          |
 
-</span></div>
+</div>
 
 ### 2.4.4. _Metodi di Eventi_
 
@@ -2036,7 +2036,7 @@ Ci sono diversi tipi di eventi che possono essere _triggerati_, i più comuni so
 
 I più comuni sono:
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |   Evento    |                     Descrizione                     |
@@ -2056,7 +2056,7 @@ I più comuni sono:
 
 Sono spesso ingorati, ma possono essere strumenti potenti.
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |  Evento   |                                   Descrizione                                   |
@@ -2093,7 +2093,7 @@ document.querySelector("#loginForm").addEventListener("submit", function (e) {
 
 ##### 2.4.4.1.3. Eventi Media
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |     Evento     |                      Descrizione                      |
@@ -2109,7 +2109,7 @@ document.querySelector("#loginForm").addEventListener("submit", function (e) {
 
 ##### 2.4.4.1.4. Eventi di Frame
 
-<div class="flexbox">
+<div class="flexbox" markdown="1">
 <span>
 
 |       Evento        |                                       Descrizione                                       |

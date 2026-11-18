@@ -754,7 +754,7 @@ print_r(asort($giorni));
 
 Altre funzioni sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Funzione                                            | Esempio                                                                                 | Descrizione                                                                                                                                 |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -766,7 +766,7 @@ Altre funzioni sono:
 | `in_array($needle, $haystack)`                      | `in_array(1, ['a' => 1, 'b' => 2])`                                                     | Cerca il valore dell'ago nel fieno                                                                                                          |
 | `shuffle($someArray)`                               | `shuffle(['a' => 1, 'b' => 2])`                                                         | Mescola i valori, vengono fornite nuove chiavi                                                                                              |
 
-</span></div>
+</div>
 
 ## 3.2. Array Superglobali
 
@@ -888,7 +888,7 @@ E' possibile recuperare le informazioni dalla richiesta _HTML_.
 </figcaption>
 </figure>
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Chiave            | Descrizione                                                                                              |
 | ----------------- | :------------------------------------------------------------------------------------------------------- |
@@ -901,7 +901,7 @@ E' possibile recuperare le informazioni dalla richiesta _HTML_.
 | `HTTP_USER_AGENT` | Contiene informazioni sul browser e sull'OS del _client_ che effettua la richiesta. <br> **Può mentire** |
 | `HTTP_REFERER`    | Contiene l'indirizzo della pagina che ha reindirizzato su questa tramite _link_. <br> **Può mentire**    |
 
-</span></div>
+</div>
 
 ```php
 echo $_SERVER["HTTP_USER_AGENT"];
@@ -939,7 +939,7 @@ Inoltre deve essere aggiunto l'attributo `enctype="multipart/from-data"` nel `<f
 
 Le chiavi più importanti per `$_FILES` sono: `name`, `type`, `tmp_name`, `error` e `size`.
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Funzione   | Descrizione                                                                                                                                    |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -949,7 +949,7 @@ Le chiavi più importanti per `$_FILES` sono: `name`, `type`, `tmp_name`, `error
 | `error`    | Un intero che codifica molti possibili errori. Viene impostato su `UPLOAD_ERR_OK` (valore intero 0) se il file è stato caricato correttamente. |
 | `size`     | Un intero che rappresenta la dimensione in byte del file caricato.                                                                             |
 
-</span></div>
+</div>
 
 Ci sono 3 meccanismi principali per avere delle restiioni sulla grandezza dei file:
 
@@ -2335,7 +2335,7 @@ Può essere settata in **qualsiasi file _PHP_** tramite la funzione `error_repor
 
 Alcuni valori comuni sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |  Costante   | Valore |              Descrizinone               |
 | :---------: | :----: | :-------------------------------------: |
@@ -2344,7 +2344,7 @@ Alcuni valori comuni sono:
 | `E_WARNING` |   2    | _Non Fatal Runtime Errors_ e _Warnings_ |
 |             |   0    |              Nessun report              |
 
-</span></div>
+</div>
 
 ### 3.9.2. Display Errors
 
@@ -2586,7 +2586,7 @@ Ipotizzando che la _query string_ sia la seguente:
 &emsp;`id=0&name1=&name2=smith&name3=%20`
 &emsp;<small>(`name1` non ha valore e `name3` è uno spazio)</small>
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Metodo                  | Ritorno | Descrizione                                                   |
 | ----------------------- | ------- | ------------------------------------------------------------- |
@@ -2601,7 +2601,7 @@ Ipotizzando che la _query string_ sia la seguente:
 | `empty($_GET['name3'])` | `false` | Il valore di spazio non è considerato vuoto                   |
 | `empty($_GET['name4'])` | `true`  |                                                               |
 
-</span></div>
+</div>
 
 ### 3.9.6. Espressioni Regolari
 

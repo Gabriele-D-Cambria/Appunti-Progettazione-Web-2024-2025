@@ -64,7 +64,7 @@ Argomenti:
 
 ## 📖 Ordine di Studio Consigliato
 
-1. [Funzionamento del Web](./FUnzionamento&20del%20Web)
+1. [Funzionamento del Web](./Funzionamento%20del%20Web)
 1. [Gestione dello Stato](./Gestione%20dello%20Stato)
 1. [HTML](./HTML)
 1. [CSS](./CSS)

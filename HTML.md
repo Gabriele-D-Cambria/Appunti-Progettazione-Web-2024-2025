@@ -509,7 +509,7 @@ Ogni _definizione_ inizia con il tag `<dd>`
 Alcuni caratteri hanno un loro significato e non è possibile inserirli come caratteri di testo.<br/>
 Per ovviare a questo problema sono state introdotti le _carachter entities_, alcune sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 <table>
     <tr>
@@ -537,7 +537,7 @@ Per ovviare a questo problema sono state introdotti le _carachter entities_, alc
         <td>&trade;</td>
     </tr>
 </table>
-</span></div>
+</div>
 
 # 5. **Elementi Semantici HTML5**
 
@@ -919,7 +919,7 @@ tbody td {
 </div>
 </div>
 
-> <div class="flexbox"><span class="">
+> <div class="flexbox" markdown="1">
 > <table style="border: solid 1pt black; text-align: center; position: relative; left: 50%; transform: translateX(-50%);">
 >    <caption style="font-style: italic; font-family: 'Comic Sans MS', sans-serif; font-size: small;">La caption della tabella</caption>
 >    <thead style="background-color: lightcoral; text-align: center;">
@@ -952,7 +952,7 @@ tbody td {
 >        </tr>
 >    </tbody>
 > </table>
-> </span></div>
+> </div>
 
 ## 6.7. **_Form_**
 
@@ -1062,7 +1062,7 @@ Permette l'invio di dati binari.
 
 ### 6.7.3. **Elementi dei form**
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | **Tag**      | **Descrizione**                                                               | **Rappresentazione**                                  |
 | ------------ | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -1078,13 +1078,13 @@ Permette l'invio di dati binari.
 | `<select>`   | Definisce un elenco a più elementi                                            | <select><option>1</option><option>2</option></select> |
 | `<textarea>` | Definisce una casella di testo a più righe                                    | <textarea></textarea>                                 |
 
-</span></div>
+</div>
 
 #### 6.7.3.1. `<input>`
 
 Alcuni valori per l'attributo _type_ del tag `<input>`:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Nome                                                          | Descrizione                                                                                                                    | Rappresentazione                                                                                                                                   |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1101,7 +1101,7 @@ Alcuni valori per l'attributo _type_ del tag `<input>`:
 | `color`                                                       | (HTML5) Permette di scegliere un colore da una palette.                                                                        | <input type="color" />                                                                                                                             |
 | `date`, `time`, `datetime`, `datetime-local`, `month`, `week` | Sono tutti controlli per la validazione di date e orari.                                                                       | <input type="date" /> <input type="time" /> <input type="datetime" /> <input type="datetime-local" /> <input type="month" /> <input type="week" /> |
 
-</span></div>
+</div>
 
 E' possibile utilizzare controlli avanzati per alcuni tag:
 
@@ -1258,7 +1258,7 @@ Tra gli attributi opzionale più importanti abbiamo:
 
 I _buttons_ sono un altro tipo di input, i più importanti sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Tipo                    | Descrizione                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1268,7 +1268,7 @@ I _buttons_ sono un altro tipo di input, i più importanti sono:
 | `<input type="image">`  | Crea un pulsante di invio personalizzato che utilizza un'immagine per la sua visualizzazione                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `<button>`              | Crea un pulsante personalizzato. L'elemento `<button>` differisce da `<input type="button">` in quanto puoi personalizzare completamente ciò che appare nel pulsante (includere sia immagini che testo, saltare completamente l'elaborazione lato server usando i collegamenti ipertestuali, ...).<br> Si può trasformare il pulsante in un pulsante di invio usando l'attributo `type="submit"`. <br>Con i pulsanti è più facile applicare gli stili ai contenuti, perché valgono i vari tag `<i>`,`<b>`,`<strong>` |
 
-</span></div>
+</div>
 
 #### 6.7.3.5. _Altri controlli_
 
@@ -1579,7 +1579,7 @@ function createRiver(context) {
 
 I pattern di ripetizione sono:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 | Repeat      | Value                                                    |
 | ----------- | -------------------------------------------------------- |
@@ -1588,7 +1588,7 @@ I pattern di ripetizione sono:
 | `repeat-y`  | L'immagine è ripetuta solo nella direzione Y             |
 | `no-repeat` | L'immagine è mostrata una volta e non è ripetuta         |
 
-</span></div>
+</div>
 
 ## 8.5. Scalare oggetti
 

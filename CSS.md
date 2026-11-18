@@ -143,7 +143,7 @@ Le unità di misura sono di due tipi:
 
 Alcune unità di misura sono le seguenti:
 
-<div class="flexbox"><span>
+<div class="flexbox" markdown="1">
 
 |   Unità    | Descrizione                                                                                                                                                                                                                              |      Tipo       |
 | :--------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------: |
@@ -154,7 +154,7 @@ Alcune unità di misura sono le seguenti:
 |   `rem`    | Sta per _root-em_, che è la dimensione del font dell'elemento radice.<br> A differenza di `em`, che può essere diverso per ogni elemento, il `rem` è costante in tutto il documento.                                                     | Relativo (CSS3) |
 | `vw`, `vh` | Stanno per larghezza e altezza del _viewport_ (finestra del browser).<br> Entrambi sono valori percentuali (tra 0 e 100) del _viewport_.<br>Ciò consente a un elemento di cambiare dimensione quando il _viewport_ viene ridimensionato. | Relativo (CSS3) |
 
-</span></div>
+</div>
 
 ## 2.2. _Locazioni dei file_
 
@@ -372,7 +372,7 @@ E' possibile selezionare anche _pseudo-elementi_ e _pseudo-classi_ (`::` alcuni 
 
 Permette di selezionarre elementi in base ai loro genitori, figli o fratelli.
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 |     Selettore      |                             Match                             | Esempio  |
 | :----------------: | :-----------------------------------------------------------: | :------: |
@@ -381,7 +381,7 @@ Permette di selezionarre elementi in base ai loro genitori, figli o fratelli.
 | Fratello Adiacente | Specifica il tag direttamente successivo a quello specificato |  `h3+p`  |
 | Fratello Generale  |     Elemento che ha lo stesso padre di quello specificato     |  `h3~p`  |
 
-</span></div>
+</div>
 
 ```html
 <head>
@@ -1156,7 +1156,7 @@ Esiste un ulteriore voce chiamata `grid-template-areas`, che permette di esplici
 
 E' possibile spostare un oggetto dalla sua posizione di base nel _normal flow_ tramite la proprietà `position`.
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 | Valore `position` |                                                                                    Descrizione                                                                                    |
 | :---------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -1165,7 +1165,7 @@ E' possibile spostare un oggetto dalla sua posizione di base nel _normal flow_ t
 |    `relative`     | L'elemento viene spostato rispetto a dove sarebbe nel flusso normale.<br> Gli altri elementi fanno riferimento al valore originale di `position` e quello spazio viene mantenuto. |
 |     `static`      |                                          (`default`) L'elemento è posizionato in base al flusso normale. Questo è il valore predefinito                                           |
 
-</span></div>
+</div>
 
 Rimane la possibilità di avere immagini che si sovrappongano, perciò esiste la proprietà `z-index` per far si che <u>elementi posizionati</u> vengano mostrati sopra o sotto altri.  
 La proprietà è sempre **relativa al suo contenitore, <u>non è assoluta</u>**
@@ -1176,7 +1176,7 @@ La proprietà è sempre **relativa al suo contenitore, <u>non è assoluta</u>**
 
 E' possibile muovere un elemento dalla sua posizione nel _flow normale_ tramite la proprietà `float`.
 
-<div class="flexbox"><span>
+<div class="flexbox" markdown="1">
 
 | Valore  |                                                       Descrizione                                                        |
 | :-----: | :----------------------------------------------------------------------------------------------------------------------: |
@@ -1184,7 +1184,7 @@ E' possibile muovere un elemento dalla sua posizione nel _flow normale_ tramite 
 | `right` | L'elemento viene messo alla destra del suo contenitore. <br>Altri elementi adiacenti sono posizionati sulla sua sinistra |
 | `none`  |                        L'elemento può avere altri elementi adiacenti sia a sinistra che a destra                         |
 
-</span></div>
+</div>
 
 L'elemento che ha la proprietà `float` deve <u>sempre avere la sua `width` specificata</u>, così da dare informazioni sul punto di adiacenza al resto della pagina.
 
@@ -1444,7 +1444,7 @@ La norma prevede di inserire le _media queries_ secondo l'apporccio del **miglio
 
 Altri attributi delle _media queries_ sono:
 
-<div class="flexbox"><span>
+<div class="flexbox" markdown="1">
 
 |    _Feature_    |                          _Description_                          |
 | :-------------: | :-------------------------------------------------------------: |
@@ -1455,7 +1455,7 @@ Altri attributi delle _media queries_ sono:
 |  `orientation`  | Se il dispositivo è in visualizzazione _portrait_ o _landscape_ |
 |     `color`     |                    Numero di bit per colore                     |
 
-</span></div>
+</div>
 
 Quando si tratta di immagini può utilizzare anche il tag `<picture>`, inserendo al suo interno più `<source>` da utilizzare in base al contesto nel quale il sito è aperto:
 

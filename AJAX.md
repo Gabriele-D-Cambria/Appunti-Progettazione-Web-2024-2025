@@ -4,10 +4,17 @@ title: AJAX
 
 # 1. Index
 
+<!--toc:start-->
+
+- [1. Index](#1-index)
+- [2. AJAX](#2-ajax)
+  - [2.1. Richieste `XMLHttp`](#21-richieste-xmlhttp)
+  - [2.2. `Fetch`](#22-fetch)
+  - [2.3. `async` e `await`](#23-async-e-await)
+- [3. Task](#3-task)
+<!--toc:end-->
 
 # 2. AJAX
-
-# 1. AJAX
 
 Il _JS_ è un lingauggio _event-based_, dove il codice viene eseguito in risposta ad eventi tramite _callback_ di funzione.
 
@@ -73,7 +80,7 @@ Le funzioni asincrone permettono anche di eseguire richieste `GET`/`POST` manten
 
 <img class="60" src="./images/JS/AJAX/Normal Request Response Loop.png">
 
-## 1.1. Richieste `XMLHttp`
+## 2.1. Richieste `XMLHttp`
 
 Le `XMLHttpRequest` sono utilizzate per inviare richieste `http`/`https` ad un _webserver_.
 
@@ -161,14 +168,14 @@ echo "69";
 
 Altri metodi utili delle richieste sono:
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 |       Metodo       |                        Parametri                        | Descrizione                           |
 | :----------------: | :-----------------------------------------------------: | :------------------------------------ |
 |       `send`       |        `string`: utilizzata per richieste `POST`        | Invia una richiesta al server         |
 | `setRequestHeader` | `header`: l'_header name_ <br> `name`: l'_header value_ | Aggiunge _header HTTP_ alla richiesta |
 
-</span></div>
+</div>
 
 Un esempio di utilizzo di questi metodi:
 
@@ -201,7 +208,7 @@ Un esempio più generico invece:
 </script>
 ```
 
-## 1.2. `Fetch`
+## 2.2. `Fetch`
 
 `Fetch` è una versione moderna delle `HttpRequest`.
 Permette di scrivere del codice più lineare rispetto ad avere livelli di callback multipli, e gestire meglio gli errori.
@@ -230,7 +237,7 @@ Possiamo associare degli handler agli stati `fulfilled` e `rejected`
 
 Per associare delle azioni alle promesse si utilizzano:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |   Metodo    | Descrizione                                                                                                                      |
 | :---------: | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -238,7 +245,7 @@ Per associare delle azioni alle promesse si utilizzano:
 |  `catch()`  | Imposta l'_handler_ nello stato _rejected_                                                                                       |
 | `finally()` | Imposta l'_handler_ nello stato _settled_                                                                                        |
 
-</span></div>
+</div>
 
 Alcuni esempi impostando la seguente _Promise_
 
@@ -489,7 +496,7 @@ fetch("https://api....")
 - `res.json()` ritorna una seconda promessa, gestita dal **secondo `then`**
 - `data` è l'oggetto restituito.
 
-## 1.3. `async` e `await`
+## 2.3. `async` e `await`
 
 Sono state introdotte per semplificare il codice _promise-based_.
 
@@ -677,7 +684,7 @@ async function loadList() {
 </div>
 </div>
 
-# 2. Task
+# 3. Task
 
 Il modello _JS_ è implementato a **task** in un _loop infinito_:
 

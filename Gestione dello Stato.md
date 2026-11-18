@@ -85,7 +85,7 @@ Come tutti gli altri _header_, **devono essere inviati prima di qualsiasi output
 
 Andiamo ad analizzare più a fondo cosa indicano:
 
-<div class="flexbox"><span class="index">
+<div class="flexbox" markdown="1">
 
 | Variabile | Descrizione                                                                                                                                                                                                                                                                              |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -94,7 +94,7 @@ Andiamo ad analizzare più a fondo cosa indicano:
 | `path`    | indica un _path URL_ che **deve esistere nella risorsa richiesta prima di inviare l'header**. La verifica è fatta comparando i singoli caratteri con l'inizio della richiesta _URL_, e il cookie è inviato solo se c'è una corrispondenza. Di default il valore è la _current directory_ |
 | `secure`: | è una flag che non ha valori specificati. Specifica se il cookie va inviato tramite una richiesta `SSL` con il _protocollo HTTPS_ (contenente informazioni confidenziali/sensibili). Di default i cookie in una connessione HTTPS sono settati su `secure`.                              |
 
-</span></div>
+</div>
 
 ```php
 $value = 'a nice cookie';

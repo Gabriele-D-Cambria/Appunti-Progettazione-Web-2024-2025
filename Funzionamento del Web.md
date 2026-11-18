@@ -78,7 +78,7 @@ Le principali funzionalità del Web sono:
 
 ## 2.2. **Vantaggi delle Web App sulle Desktop App**
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 |                                  <span style="color: green">PROS</span>                                  |                                                <span style="color: red">CONS</span>                                                 |
 | :------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
@@ -88,7 +88,7 @@ Le principali funzionalità del Web sono:
 |                   Archiviazione Centralizzata, pochi riguardi sulla memoria degli user                   |                          Problemi con siti che possono essere mostrati in maniera errata su alcuni browser                          |
 |                                                                                                          | Accessi limitati da Sistemi Operativi che possono impedire il download o l'accesso di alcuni software (come _Adobe Flash_ su _iOS_) |
 
-</span></div>
+</div>
 
 ## 2.3. **_Intranet_**
 
@@ -317,7 +317,7 @@ Per comodità da adesso in poi la risposta verrà salvata nel _DNS Server_.
 
 I nomi simbolici sono organizzati da una gerarchia, ovvero parti separati da punti. L'ordina va a aumentare la specificità allo spostarsi a dx.
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 <table align="center" frame="void" width="100%">
     <tr align="center">
@@ -335,11 +335,11 @@ I nomi simbolici sono organizzati da una gerarchia, ovvero parti separati da pun
     </tr>
 </table>
 
-</span></div>
+</div>
 
 I **TDL** sono così divisi:
 
-<div class="flexbox"><span class="">
+<div class="flexbox" markdown="1">
 
 <table align="center">
 <tr align="center">
@@ -374,7 +374,7 @@ I **TDL** sono così divisi:
     </tr>
 </table>
 
-</span></div>
+</div>
 
 Per poter assegnare ad un IP un determinato dominio esistono dei _registri per i nomi di dominio_, e sono loro che concedono i nomi di dominio agli indirizzi IP.
 
