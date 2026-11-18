@@ -350,9 +350,9 @@ Può essere utilizzato anche con gli oggetti, anche se è poco adoperato:
 
 ```js
 let stud1 = { name: "Mario", averageGrade: 25 };
-let r1 = { ...stud1, course: "Programmazione Web" };
+let r1 = { ...stud1, course: "Progettazione Web" };
 console.log(r1, "\n");
-// { name: 'Mario', averageGrade: 25, course: 'Programmazione Web' }
+// { name: 'Mario', averageGrade: 25, course: 'Progettazione Web' }
 
 // --- Se i nomi sono uguali, vince l'ultimo ---//
 let r2 = { ...stud1, name: "Gino" };

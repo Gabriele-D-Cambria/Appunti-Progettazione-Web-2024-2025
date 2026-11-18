@@ -1,4 +1,4 @@
-# Appunti Progettazioen Web A.A. 2024-2025
+# Appunti Progettazione Web A.A. 2024-2025
 
 Questi sono gli appunti del corso di Progettazione Web 2024-2025
 dell'Università di Pisa.
