@@ -104,7 +104,9 @@ Alcune tecnologie _server-side_ più famose:
 - **Node.js**: un ambiente di esecuzione di linguaggio `JavaScript` lato server, che permette di utilizzare il codice _javascript_ sia lato client sia lato server. `Node.js` ha il proprio _web server software_ e non richiede quindi l'utilizzo di _web server_ terzi.
 - **PHP (_Personal Homepages $\to$ PHP: HyperText Preprocessor_)**: è un linguaggio dinamico che può essere inserito direttamente nei file `HTML`, anche se supporta diverse proprietà dei linguaggi _object-oriented_ (classi, ereditarietà,...).
   Le pagine _PHP_ sono compilate in una rappresentazione intermedia chiamata **opcodes** analoghi al _byte-code_ del `Java` o al framework **MSIL** di `.NET`.
-  **WordPress** si basa su `PHP`.
+  **WordPress** si basa su `PHP
+
+<?php`.
 
 ## 2.1. Responsabilità dei WebServer
 
@@ -133,7 +135,9 @@ Noi utilizzeremo **LAMP** se su _Linux_ oppure **XAMPP** su _Windows_.
 <div class="grid2">
 <div>
 
-Il _WebServer_ **Apache** è un intermediario che interpreta le richieste HTTP e decide come gestire la richiesta, lavorando spesso insieme al `PHP`.
+Il _WebServer_ **Apache** è un intermediario che interpreta le richieste HTTP e decide come gestire la richiesta, lavorando spesso insieme al `PHP
+
+<?php`.
 
 _Apache_ esegue un **daemon** sul server, ovvero un **processo in background** che _attende un evento specifico per attivarsi._
 
@@ -180,9 +184,11 @@ Ciò implica che devo terminare il processo su un _thread_ prima che ne possa in
 
 ## 2.2. Utilizzare XAMPP
 
-`XAMPP` installa e configura _Apache_, `PHP` e `MySQL`.
+`XAMPP` installa e configura _Apache_, `PHP
+<?php` e `MySQL`.
 
-Le richieste `PHP` nel nostro browser utilizzano il dominio **localhost** `127.0.0.1`
+Le richieste `PHP
+<?php` nel nostro browser utilizzano il dominio **localhost** `127.0.0.1`
 
 I file PHP devono essere salvati da quache parte all'interno della cartella `C:\pweb\tools\XAMPP\htdocs`
 
@@ -198,6 +204,7 @@ Le sintassi per i cicli, gli assegnamenti e le condizioni sono quasi identiche a
 Sono presenti differenze invece nella dichiarazione di _funzioni_, _classi_ e nella definizione di variabili.
 
 Il codice _PHP_ può essere inserito direttamente nel file _HTML_, tramite il tag `<?php ... ?>`.
+
 In questo caso qualsiasi codice all'interno del tag che si trova fuori dal documento stesso, ha in automatico **echo** al client.
 
 ```html
@@ -240,6 +247,7 @@ In questo caso qualsiasi codice all'interno del tag che si trova fuori dal docum
 <p style="text-align: center">Tradotto in:</p>
 
 ```php
+<?php
 <!DOCTYPE html>
 <html>
   <body>
@@ -260,6 +268,7 @@ Anche se è possibile inserire tutto in un unico file html, l'approccio corretto
 `display-artist.php`
 
 ```php
+<?php
 <?php
     include "php/classes/artistCollection.php"
     include "php/classes/artist.php"
@@ -286,6 +295,7 @@ Anche se è possibile inserire tutto in un unico file html, l'approccio corretto
 
 ```php
 <?php
+<?php
 class ArtistCollection{
     private $collection = array();
 
@@ -307,6 +317,7 @@ class ArtistCollection{
 
 ```php
 <?php
+<?php
 class Artist{
     var $Id;
     var $firstName;
@@ -325,6 +336,7 @@ class Artist{
 I commenti in PHP possono essere:
 
 ```php
+<?php
 # Linea Singola
 
 /*
@@ -354,6 +366,7 @@ Per dichiarare una **costante** si utilizza la funzione `define()`, e dal moment
 Per fare output si utlizza la funzione `echo()`.
 
 ```php
+<?php
 # Costante
 define("DATABASE_LOCAL", "localhost");
 
@@ -372,6 +385,7 @@ echo $string;
 Le stringhe possono essere unite in maniera rapida utilizzando il carattere `.`
 
 ```php
+<?php
 $username = "World";
 
 echo "Hello" . $username;
@@ -407,6 +421,7 @@ In alternativa alla funzione `echo()` si può utilizzare la funzione `printf()`,
 La funzione prende in ingresso **almeno un parametro stringa**, e dei _placeholders_ opzionali.
 
 ```php
+<?php
 $product = "box";
 $weight = 1.56789;
 
@@ -426,6 +441,7 @@ I segnaposto sono così fatti:
   - `s`: stringhe
 
 ```php
+<?php
 $firstName = "Mario";
 printf("Ciao %s\n", "Amilcare");
     // Ciao Amilcare
@@ -441,6 +457,7 @@ Per utilizzarlo si indica tra il `%` e lo _specificatore_ la stringa `.n`, dove 
 La sintassi è praticamente identica a quella del _JS_:
 
 ```php
+<?php
 if($hourOfDay > 6 && $hourOfDay < 12){
     $greeting = "Good Morning";
 }
@@ -463,6 +480,7 @@ else{
 ```
 
 ```php
+<?php
 switch($artType){
     case "PT":
         $output = "Painting";
@@ -478,6 +496,7 @@ switch($artType){
 ### 3.1.4. Cicli
 
 ```php
+<?php
 $count = 0;
 while($count < 10){
     echo $count;
@@ -517,6 +536,7 @@ Il _PHP_ permette di inserire file in altri file.
 Per fare ciò esistono 4 diversi modi:
 
 ```php
+<?php
 include "somefile.php"      // Se non trova il file da Warning
 
 include_once "somefile.php" // Se il file è gia incluso non fa nulla
@@ -531,6 +551,7 @@ Sia `include` che `require` fanno un copia-incolla nella loro linea del contenut
 ### 3.1.6. Funzioni
 
 ```php
+<?php
 function getNiceTime(){
     return date("H:i:s");
 }
@@ -547,6 +568,7 @@ Le chiamate alle funzioni sono identiche al _C++_,
 così come il funzionamento dei **parametri di default** e ai **passaggi per valore e riferimento**.
 
 ```php
+<?php
 function getNiceTime($showSeconds = true) {
     if($showSeconds)
         return date("H:i:s");
@@ -560,6 +582,7 @@ echo getNiceTime(false);
 ```
 
 ```php
+<?php
 function changeParameter($arg) {
     $arg += 300;
     echo "arg = $arg<br>";
@@ -591,6 +614,7 @@ Ciò implica che le variabili definite in una funzione non sono accessibili dall
 Per utilizzare all'interno della funzione variabili esterne va inserito una **specifica esplicita**, tramite _keyword_ `global`:
 
 ```php
+<?php
 $count= 56;
 
 function testScope() {
@@ -628,6 +652,7 @@ I valori invece possono essere qualsiasi tipo di oggetto, tipo primitivo e non, 
 Per definire un _Array_ si utilizza la funzione `array()` o la notazione con `[]`:
 
 ```php
+<?php
 $days = array();
 $days[0] = "Mon";
 $days[1] = "Tue";
@@ -641,6 +666,7 @@ $giorni = ["Lun", "Mar", "Mer"];
 E' altrimenti possibile specificare chiave e valore e associarli:
 
 ```php
+<?php
 $days = array(0 => "Mon", 1 => "Tue", 2 => "Wed");
 
 $forecast = array("Mon" => 40, "Tue" => 47, "Wed" => 52);
@@ -649,6 +675,7 @@ $forecast = array("Mon" => 40, "Tue" => 47, "Wed" => 52);
 Gli **array multidimensionali** non sono altro che _Array di Array_
 
 ```php
+<?php
 $month = array(
     array("Mon","Tue","Wed","Thu","Fri"),
     array("Mon","Tue","Wed","Thu","Fri"),
@@ -668,6 +695,7 @@ Per poter iterare un array, dobbiamo poter trovare il numero dei suoi elementi.
 Per fare ciò si utlizza la funzione `count()`;
 
 ```php
+<?php
 for ($i = 0; $i < count($days); $i++){
     echo $days[i];
 }
@@ -676,6 +704,7 @@ for ($i = 0; $i < count($days); $i++){
 Alternativamente è possibile utilizzare il `foreach`
 
 ```php
+<?php
 // Itero tra i valori
 foreach($forecast as $vaule){
     echo $value;
@@ -690,6 +719,7 @@ foreach($forecast as $key => $value){
 Il _PHP_ permette di inserire elementi in un _Array_ saltando degli indici.
 
 ```php
+<?php
 $days = array("Mon","Tue","Wed","Thu","Fri");
 
 $days[7] = "Sat";
@@ -705,6 +735,7 @@ echo $days[6]
 Possiamo eliminare un elemento **esplicitamente** utilizzando la funzione `unset()`:
 
 ```php
+<?php
 $days = array("Mon","Tue","Wed","Thu","Fri");
 
 unset($days[2]);
@@ -724,6 +755,7 @@ La funzione `array_values(a)` restituisce tutti i valori di un array specificato
 Poiché le chiavi degli _Array_ non hanno necessità di essere né sequenziali né tantomeno numeri interi, è possibile cercare una data chiave all'interno dell'Array tramite la funzione `isset()`:
 
 ```php
+<?php
 $dispari = array(1 => "Hello", 3 => "World", 5 => "!");
 
 if(isset($displari[0]))
@@ -742,6 +774,7 @@ Tra le più comuni troviamo:
 - `asort($array)`: ordina per valore lasciando invariate le coppie chiave/valore
 
 ```php
+<?php
 $giorni = ["Lun", "Mar", "Mer", "Gio"];
 
 print_r(sort($giorni));
@@ -794,6 +827,7 @@ Produco la sequente richiesta:
 <div class="top">
 
 ```php
+<?php
     echo $_GET["uName"];
         // ricardo
     echo $_GET["uPass"]
@@ -808,6 +842,7 @@ Le richieste, a seconda che siano effettiate tramite metodo `GET`/`POST`, sono i
 Questo semplifica l'accesso ai dati perché possiamo gestire in maniera diversa i dati inviati a seconda del metodo utilizzato.
 
 ```php
+<?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST["uName"])) && isSet($_POST["pass"]){
         // --- gestione dati --- //
@@ -874,6 +909,7 @@ L'array associativo `$_SERVER` contiene:
 Per utilizzare l'array `$_SERVER` ci si riferisce così:
 
 ```php
+<?php
 echo $_SERVER["SERVER_NAME"] . "<br>";
 echo $_SERVER["SERVER_SOFTWARE"] . "<br>";
 echo $_SERVER["REMOTE_ADDR"] . "<br>";
@@ -904,6 +940,7 @@ E' possibile recuperare le informazioni dalla richiesta _HTML_.
 </div>
 
 ```php
+<?php
 echo $_SERVER["HTTP_USER_AGENT"];
 
 $browser = get_browser($_SERVER["HTTP_USER_AGENT"], true);
@@ -911,6 +948,7 @@ print_r($browser);
 ```
 
 ```php
+<?php
 $previousPage = $_SERVER["HTTP_REFERER"];
 
 if(strpos("search.php", $previousPage) != 0){
@@ -990,6 +1028,7 @@ Anche questo è facilmente bypassabile fagli utenti.
 L'ultima opzione quella di limitare le dimensioni con un smeplice controllo lato server.
 
 ```php
+<?php
 $max_file_size = 1000000;
 foreach($_FILES as $fileKey => $fileArray){
     if($fileArray["size"] > $max_file_size){
@@ -1002,6 +1041,7 @@ foreach($_FILES as $fileKey => $fileArray){
 Questi controlli possono essere effettuati anche per limitare il tipo dei file che l'utente può inviare:
 
 ```php
+<?php
 
 $validExt = array("jpg", "png");
 $validMime = array("image/jpeg", "image/png");
@@ -1024,6 +1064,7 @@ I file inviati sono temporanei, e molto spesso si vuole spostarli in una cartell
 Per fare ciò si utilizza la funzione `move_uploaded_file()`:
 
 ```php
+<?php
 $file = $_FILES["file1"]["tmp_name"];
 $destinazione = "./upload/". $_FILES["file1"]["name"];
 
@@ -1051,6 +1092,7 @@ Utilizza diverse funzioni:
 - `fclose()`: chiude il file
 
 ```php
+<?php
 // Apro in lettura
 $f = fopen("esempio.txt", "r");
 $ln = 0;
@@ -1070,6 +1112,7 @@ Utilizza anch'esso diverse funzioni:
 - `file_put_contents()`: scrive il contenuto di una **variabile stringa su file**
 
 ```php
+<?php
 $fileAsString = file_get_contents("example.txt");
 $fileAsString .= "\n L'ho aggiunto ora!";
 
@@ -1088,6 +1131,7 @@ Immaginiamo di avere questo file `esempio.txt`:
 Il codice PHP per leggerlo:
 
 ```PHP
+<?php
 $quadri = file("example.txt") or die("ERROR: Impossibile trovare il file");
 
 $delimiter = ",";
@@ -1155,6 +1199,7 @@ Dobbiamo quindi utilizzare le classi in maniera differente da come faremmo nei f
 La sintassi per definire una classe è la seguente:
 
 ```php
+<?php
 class Artista{
     public  $nome;
     public  $cognome;
@@ -1170,6 +1215,7 @@ $dali = new Artist();
 Dopo aver istanziato un oggetto ci si riferisce alle sue proprietà tramite _operatore freccia_ `->`:
 
 ```php
+<?php
 $picasso->$nome = "Pablo";
 $picasso->$cognome = "Picasso";
 $picasso->$dataDiNascita = "Malaga";
@@ -1180,6 +1226,7 @@ $picasso->$dataDiMorte = "8 Aprile 1973";
 Esiste anche una funzione _costruttore_ definita dal nome `__construct()` che si riferisce ai parametri della classe tramite la sintassi `$this->`:
 
 ```php
+<?php
 class Artista{
     public  $nome;
     public  $cognome;
@@ -1202,6 +1249,7 @@ $picasso = new Artist("Pablo", "Picasso", "Malaga", "25 Ottobre 1881", "8 Aprile
 I **metodi** sono associati ad una classe e si comportano come le funzioni:
 
 ```php
+<?php
 class Artist{
     // ...
     public function outputAsTable(){
@@ -1227,6 +1275,7 @@ Il diagramma _UML_ di una classe con metodi è il seguente:
 Nelle classi posso definire membri costanti:
 
 ```php
+<?php
 class X{
     public const PRIMA = "Sono costante";
 
@@ -1252,6 +1301,7 @@ I membri di una classe possono avere visibilità uguale a quelle del C++:
 <div>
 
 ```php
+<?php
 class Quadro{
     public $title;
     private $profit;
@@ -1278,7 +1328,7 @@ $p1->doSecretThat();    // OK
 
 </div>
 <div>
-<img class="60" src="./images/PHP/UML/Visibilità.png">
+<img class="60" src="./images/PHP/UML/Visibilita.png">
 </div>
 </div>
 
@@ -1291,6 +1341,7 @@ I membri statici utilizzano la notazione `self::` e non sono associati ad un uni
 Vi si può accedere così:
 
 ```php
+<?php
 class Artista{
     public static $artistCount = 0;
     public  $nome;
@@ -1321,6 +1372,7 @@ In questo modo possiamo infatti nascondere i dettagli di un oggetto, e permetter
 <div>
 
 ```php
+<?php
 public function getFirstName(){
     return $this->firstName;
 }
@@ -1344,6 +1396,7 @@ public function setDeathDate($data){
 Un esempio di utilizzo può essere il seguente:
 
 ```php
+<?php
 <html>
 <body>
 <h2>Tester per la classe Artist</h2>
@@ -1386,12 +1439,14 @@ La classe ereditata si chiama **superclasse** o **classe base**.
 <div>
 
 ```php
+<?php
 class Quadro extends Arte{
     // ...
 }
 ```
 
 ```php
+<?php
 $p = new Painting();
 // ...
 echo $p->getName();     // superclasse
@@ -1416,6 +1471,7 @@ Si utilizzano esclusivamente come _superclassi_ per altre classi.
 <div>
 
 ```php
+<?php
 abstract class Art{
     private $name;
     private $artist;
@@ -1455,7 +1511,7 @@ L'1 sulla freccia in alto si riferisce al fatto che ci sarà in `Art` **1** rife
 
 Queste classi possono essere così utilizzate:
 
-```html
+```php
 <?php
     $picasso = new Artist("Pablo", "Picasso", "Malaga", "May 11,904","Apr 8, 1973");
     $guernica = new Painting("1937", $picasso, "Guernica", "Oil on canvas");
@@ -1473,6 +1529,7 @@ Il **polimorfismo** indica la possibilità di vedere un oggetto da più punti di
 Ad esempio:
 
 ```php
+<?php
 $guernica = new Painting("1937", $picasso, "Guernica", "Oil on canvas");
 ```
 
@@ -1481,6 +1538,7 @@ E' sia un oggetto `Painting` sia un oggetto `Art`, e si comporterà in modo dive
 Il _polimorfismo_ ci permette inoltre di gestire liste di oggetti e chiamare lo stesso metodo sovrascritto per ognunn elemento.
 
 ```php
+<?php
 $picasso = new Artist("Pablo", "Picasso", "Malaga", "Oct 25, 1881", "Apr 8, 1973");
 
 // Crea i dipinti
@@ -1513,6 +1571,7 @@ foreach ($picasso->getworks() as $art) {
 L'interfaccia di un'oggetto è un modo per dichiarare _senza implementare_ una **lista formale di metodi che una classe <u>deve</u> implementare**.
 
 ```php
+<?php
 interface Viewable{
     public function getSize();
     public function getONG();
@@ -1522,6 +1581,7 @@ interface Viewable{
 In _PHP_ si dice che una classe **implementa un'interfaccia**:
 
 ```php
+<?php
 class Painting extends Art implements Viewable{
     // ...
     public function getSize(){
@@ -1543,6 +1603,7 @@ In _UML_ lo si rappresenta così:
 <div>
 
 ```php
+<?php
 interface Logger {
     public const NORMAL = 1;
     public const DEBUG = 2;
@@ -1583,6 +1644,7 @@ class FileLogger extends AbstractLogger {
 <div>
 
 ```php
+<?php
 $fl = new FileLogger("out.txt", Logger::NORMAL);
 
 $fl->log(Logger::NORMAL, "first message"); // Logged
@@ -1679,6 +1741,7 @@ Le interazioni di base per connettersi ad un database sono le medesime per ogni 
 Vediamo un approccio _PDO basato su eccezioni_:
 
 ```php
+<?php
 try{
     // Punto 1
     $connString = "mysql:host=localhost;dbname=bookcrm";
@@ -1713,6 +1776,7 @@ catch(PDOException $e){
 Se avessimo utilizzato un approccio procedurale tramite _mysqli_, avremmo avuto la seguente parte 1:
 
 ```php
+<?php
 $host = "localhost";
 $database ="bookcrm";
 $user = "testuser";
@@ -1724,6 +1788,7 @@ $connection = mysqli_connect($host, $user, $pass, $databasse);
 Inserire in maniera ripetuta i dettagli delle connessioni nel codice non è ideale, questi dettagli dovrebbero essere invece definiti come costanti:
 
 ```php
+<?php
 define('DBHOST', 'localhost');
 define('DBNAME', 'bookcrm');
 define('DBUSER', 'testuser');
@@ -1738,6 +1803,7 @@ Per gestire gli errori esistono tecniche diverse a seconda del tipo di connessio
 Per recuperare i risultati di una query:
 
 ```php
+<?php
 $sql = "SELECT * FROM Categories ORDER BY CategoryName";
 
 // mysqli
@@ -1750,6 +1816,7 @@ $result = $PDO->query($sql);
 Per le query che non ritornano dati:
 
 ```php
+<?php
 $sql = "UPDATE Categories SET CategoryName='Web' WHERE CategoryName='Business'";
 
 // mysqli
@@ -1768,6 +1835,7 @@ echo "<p> Updated" . $count . "rows</p>";
 E' possibile anche effettuare degli inserimenti nei database a partire da dati forniti da un utente tramite `<form>`:
 
 ```php
+<?php
 $from = $_POST['old'];
 $to = $_POST['new'];
 $sql = "UPDATE Categories SET CategoryName='$to' WHERE CategoryName='$form'";
@@ -1783,6 +1851,7 @@ Ipotizziamo di avere il seguente script:
 <div class="">
 
 ```php
+<?php
 // ...
 $user = $_POST['username'];
 $pass = $_POST['pass'];
@@ -1813,6 +1882,7 @@ Nel caso in cui l'utente inserisca dei valori accettabili tutto funziona come do
 Se un malintenzionato inserica il seguente valore:
 
 ```php
+<?php
 $user = "'; TRUNCATE TABLE Users; #"
 /*
 * Termino quello che c'è prima
@@ -1843,6 +1913,7 @@ Utilizzare le **prepared statemens** è un metodo per migliorare le _performance
 <div class="top">
 
 ```php
+<?php
 $id = $_GET['id'];
 
 // notare il parametro ?
@@ -1870,6 +1941,7 @@ if($statement = mysqli_prepare($conection, $sql)){
 <div class="top">
 
 ```php
+<?php
 $id = $_GET['id'];
 
 
@@ -1900,6 +1972,7 @@ Per processare i risultati:
 <div class="top">
 
 ```php
+<?php
 $sql = "SELECT *
         FROM Categories
         ORDER BY CategoryName";
@@ -1917,6 +1990,7 @@ if($result = mysqli_query($connection, $sql)){
 <div class="top">
 
 ```php
+<?php
 $sql = "SELECT *
         FROM Categories
         ORDER BY CategoryName";
@@ -1935,6 +2009,7 @@ while($row = $result->fetch()){
 Nel caso un cui utilizzassimo delle **prepared statements**:
 
 ```php
+<?php
 $sql = "SELECT Title, CopyrightYear
         FROM Books
         WHERE ID = ?";
@@ -1957,6 +2032,7 @@ if($statement = mysqli_prepare($connection, $sql)){
 Consideriamo al seguente classe:
 
 ```php
+<?php
 class Book{
     public $id;
     public $title;
@@ -1968,6 +2044,7 @@ class Book{
 Proviamo ad inserire i risultati della query in un nuovo oggetto:
 
 ```php
+<?php
 $id = $_GET['id'];
 
 $sql = "SELECT id, title, copyrightYear, description
@@ -1991,6 +2068,7 @@ In questo caso i nomi devono **combaciare esattamente con i nomi degli attributi
 Per ovviare a questo problema si può utilizzare un costruttore nella classe:
 
 ```php
+<?php
 class Book {
   public $id;
   public $title;
@@ -2035,6 +2113,7 @@ TODO: loginDB.pdf
 Per liberare le risorse si utilizzano le seguenti funzioni:
 
 ```php
+<?php
 // --- mysqli ---
 $connection = msqli_connect($host, $user, $pass, $database);
 // ...
@@ -2061,6 +2140,7 @@ Quando è necessario gestire più query in uno stesso database, **si utilizza il
 <div class="top">
 
 ```php
+<?php
 $connection = mysqli_connect($host, $user, $pass, $database);
 
 /*
@@ -2093,6 +2173,7 @@ else {
 <div class="top">
 
 ```php
+<?php
 $pdo = new PDO($connString, $user, $password);
 /*
 * Attiva le eccezioni in modo che venga generata un'eccezione
@@ -2149,6 +2230,7 @@ Una delle _task_ più comuni è quella di mostrare una lista di link:
 Il codice sarà simile a questa:
 
 ```php
+<?php
 $sql = "SELECT *
         FROM Categories
         ORDER BY CategoryName";
@@ -2169,6 +2251,7 @@ Assumiamo di avere una `textbox` con il nome `txtSearch` dove l'utente inserisce
 I dati verrano filtrati nella tabella `Book` e cercheremo nel titolo:
 
 ```php
+<?php
 $searchFor = '%' . $_GET['txtSearch'] . '%';
 
 $sql = "SELECT *
@@ -2189,6 +2272,7 @@ $statement->execute();
 ```
 
 ```php
+<?php
 function getSearchFor(){
     $value = "";
     if(isset($_GET[SEARCHBOX])){
@@ -2220,6 +2304,7 @@ Da qualche parte nel browser avremo:
 ```
 
 ```php
+<?php
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
@@ -2273,6 +2358,7 @@ Salvare l'immagine nel _DB_ come file `binary BLOB`
 </p>
 
 ```php
+<?php
 $fileContent = file_get_contents("someImage.jpg");
 $sql = "INSERT INTO tabellaEsempio (ImageContent)
         VALUES(':data')";
@@ -2285,6 +2371,7 @@ $statement->execute();
 Successivamente per recuperare l'immagine:
 
 ```php
+<?php
 $sql = "SELECT * FROM tabellaEsempio WHERE ImageID = :id";
 $statement = $pdo->prepare($sql);
 $statement->binfParam(':id', $_GET['id']);
@@ -2353,6 +2440,7 @@ Specifica quali errori devono essere mostrati nel browser e quali no.
 Può essere settata qualsiasi file tramite la funzione `ini_set()`:
 
 ```php
+<?php
 ini_set("display_errors", "0");
 ```
 
@@ -2367,6 +2455,7 @@ Anche qui si utilizza `ini_set()`.
 Si può anche impostare dove salvare il file di log:
 
 ```php
+<?php
 ini_set("error_log", "/restricted/my-errors.log");
 
 // nel php.ini
@@ -2376,6 +2465,7 @@ error_log = /restricted/my-errors.log
 E' possibile inviare anche solo alcuni messaggi al log tramite la funzione `error_log()`.
 
 ```php
+<?php
 $msg = "Errore Brutto";
 
 // System error log
@@ -2396,6 +2486,7 @@ Queste eccezioni possono essere gestite o meno.
 Se non sono gestite il programma termina con un messaggio di `Uncaught Exception`.
 
 ```php
+<?php
 function throwException($message = null, $code = null){
     throw new Exception($message, $code);
 }
@@ -2424,10 +2515,12 @@ E' possibile impostare degli _handler personalizzati_, per gestire determinati e
 Posso impostare una funzione come **prefefinita** tramite la stringa:
 
 ```php
+<?php
 set_exception_handler('funzione_personalizzata');
 ```
 
 ```php
+<?php
 function funzione_personalizzata($ex){
     $msg = "<p> Codice eccezione: " . $ex->getCode();
     $msg = $ex->getMessage() . "alla linea";
@@ -2450,36 +2543,39 @@ Alcuni esempi:
 <div class="top">
 
 ```php
+<?php
 // Using a non existing variable
 echo $myvar;
 echo "Hello!\n";
 ```
 
-> **$ php esempio1.php**
-> Warning: Undefined variable $myvar in
-> /Users/vecchio/Documents/didattica/PWEB/php/errori/esempio1.php on line 5
+> **\$ php esempio1.php**
+> Warning: Undefined variable \$myvar in  
+> /Users/vecchio/Documents/didattica/PWEB/php/errori/esempio1.php on line 5  
 > Hello!
 
 </div>
 <div class="top">
 
 ```php
+<?php
 // Calling a method on a non-existing variable
 echo $myvar->a_method();
 echo "Hello\n";
 ```
 
-> Warning: Undefined variable $myvar in ...errori/esempio2.php on line 4
+> Warning: Undefined variable \$myvar in ...errori/esempio2.php on line 4
 >
-> Fatal error: Uncaught Error: Call to a member function a_method() on null in ...errori/esempio2.php:4
-> Stack trace:
-> #0 {main}
+> Fatal error: Uncaught Error: Call to a member function a_method() on null in ...errori/esempio2.php:4  
+> Stack trace:  
+> #0 {main}  
 > thrown in ..errori/esempio2.php on line 4
 
 </div>
 <div class="top">
 
 ```php
+<?php
 // Turn off error reporting
 ini_set('error_reporting', 0);
 // Warning message is suppressed
@@ -2498,6 +2594,7 @@ echo "Hello\n";
 <div class="top">
 
 ```php
+<?php
 function my_error_handler($errno, $errstr) {
     // My custom actions, here just printing
     echo "There was a problem. Error number: "
@@ -2520,13 +2617,14 @@ echo $myvar->a_method();
 echo "Hello\n";
 ```
 
-> There was a problem. Error number: 2, message: Undefined variable $myvar
-> There was a problem. Error number: 2, message: Undefined variable $myvar
+> There was a problem. Error number: 2, message: Undefined variable \$myvar  
+> There was a problem. Error number: 2, message: Undefined variable \\$myvar
 
 </div>
 <div class="top">
 
 ```php
+<?php
 try {
     echo $myvar;
     echo $myvar->a_method();
@@ -2546,8 +2644,8 @@ catch (Error $e) {
 echo "Another hello!\n";
 ```
 
-> Warning: Undefined variable $myvar in esempio5.php on line 3
-> Warning: Undefined variable $myvar in esempio5.php on line 4
+> Warning: Undefined variable \$myvar in esempio5.php on line 3
+> Warning: Undefined variable \$myvar in esempio5.php on line 4
 > **In the second catch block**
 > Code: 0, message: Call to a member function a_method() on null, line: 4, file: esempio5.php
 > Another hello!
@@ -2556,6 +2654,7 @@ echo "Another hello!\n";
 <div class="top">
 
 ```php
+<?php
 try {
     echo $myvar;
     ( // <--
@@ -2623,6 +2722,7 @@ Un numero valido contiene tre numeri, seguiti da un trattino, seguiti da altri 4
 L'espressione regolare sarà:
 
 ```php
+<?php
 $reg = "/^d{3}-\d{4}$/";
 /*
 * Dall'inizio della stringa
@@ -2636,6 +2736,7 @@ $reg = "/^d{3}-\d{4}$/";
 Un modo più sofisticato sarebbe quello di non permettere alla prima cifra di essere `0` o `1`:
 
 ```php
+<?php
 $reg = "/^[2-9]\d{2}-\d{4}$/";
 /*
 * Dall'inizio della stringa
@@ -2650,6 +2751,7 @@ $reg = "/^[2-9]\d{2}-\d{4}$/";
 Possiamo rendere più flessibile lespressione permettendo i caratteri di spazio o di punto oltre al trattino tra le cifre:
 
 ```php
+<?php
 $reg = "/^[2-9]\d{2}[-\s\.]\d{4}$/" or "/^[2-9]\d{2}[\-\s\.]\d{4}$/";
 // nel primo caso non è necessario \- perché è il primo carattere
 // se fosse nel mezzo allora andrebbe obbligatoriamente inserito
@@ -2658,12 +2760,14 @@ $reg = "/^[2-9]\d{2}[-\s\.]\d{4}$/" or "/^[2-9]\d{2}[\-\s\.]\d{4}$/";
 Se ammettiamo più spazi tra le due parti:
 
 ```php
+<?php
 $reg = "/^[2-9]\d{2}\s*[-\.]\s*\d{4}$/"
 ```
 
 Possiamo ora inserire anche l'_area code_ o tra parentesi, o con spazio o con trattini o con punto:
 
 ```php
+<?php
 $reg = "/^(?\s*\d{3}\s*[\)-\.]?\s*[2-9]\d{2}\s*[-\s\.]\s*\d{4}$/";
 /*
 * Dall'inizio della stringa
@@ -2819,7 +2923,7 @@ Un esempio di validazione di form.
   margin: 1em;
 }
 
-/* 
+/*
 * :invalid è una pseudoclasse di HMLT5
 * Applicata automaticamente quando le specifiche
 * richieste non sono rispettate
@@ -2857,6 +2961,7 @@ window.onload = init;
 ```
 
 ```php
+<?php
 if(empty($_GET["ne"]) || empty($_GET["sa"]) || empty($_GET["pc"])) {
     echo "One of the required values is missing";
     die();

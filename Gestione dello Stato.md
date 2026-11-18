@@ -4,15 +4,6 @@ title: Gestione dello Stato
 
 # 1. Index
 
-
-# 2. Gestione dello Stato
-
----
-title: Gestione dello Stato
----
-
-# 1. Index
-
 <!--toc:start-->
 
 - [1. Index](#1-index)

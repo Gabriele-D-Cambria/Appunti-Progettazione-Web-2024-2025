@@ -1,5 +1,5 @@
 ---
-title: Intro to Javascript
+title: Intro to JavaScript
 ---
 
 # 1. Index
