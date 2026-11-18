@@ -104,9 +104,7 @@ Alcune tecnologie _server-side_ più famose:
 - **Node.js**: un ambiente di esecuzione di linguaggio `JavaScript` lato server, che permette di utilizzare il codice _javascript_ sia lato client sia lato server. `Node.js` ha il proprio _web server software_ e non richiede quindi l'utilizzo di _web server_ terzi.
 - **PHP (_Personal Homepages $\to$ PHP: HyperText Preprocessor_)**: è un linguaggio dinamico che può essere inserito direttamente nei file `HTML`, anche se supporta diverse proprietà dei linguaggi _object-oriented_ (classi, ereditarietà,...).
   Le pagine _PHP_ sono compilate in una rappresentazione intermedia chiamata **opcodes** analoghi al _byte-code_ del `Java` o al framework **MSIL** di `.NET`.
-  **WordPress** si basa su `PHP
-
-<?php`.
+  **WordPress** si basa su `PHP`.
 
 ## 2.1. Responsabilità dei WebServer
 
@@ -135,9 +133,7 @@ Noi utilizzeremo **LAMP** se su _Linux_ oppure **XAMPP** su _Windows_.
 <div class="grid2">
 <div>
 
-Il _WebServer_ **Apache** è un intermediario che interpreta le richieste HTTP e decide come gestire la richiesta, lavorando spesso insieme al `PHP
-
-<?php`.
+Il _WebServer_ **Apache** è un intermediario che interpreta le richieste HTTP e decide come gestire la richiesta, lavorando spesso insieme al `PHP`.
 
 _Apache_ esegue un **daemon** sul server, ovvero un **processo in background** che _attende un evento specifico per attivarsi._
 
@@ -184,11 +180,9 @@ Ciò implica che devo terminare il processo su un _thread_ prima che ne possa in
 
 ## 2.2. Utilizzare XAMPP
 
-`XAMPP` installa e configura _Apache_, `PHP
-<?php` e `MySQL`.
+`XAMPP` installa e configura _Apache_, `PHP` e `MySQL`.
 
-Le richieste `PHP
-<?php` nel nostro browser utilizzano il dominio **localhost** `127.0.0.1`
+Le richieste `PHP` nel nostro browser utilizzano il dominio **localhost** `127.0.0.1`
 
 I file PHP devono essere salvati da quache parte all'interno della cartella `C:\pweb\tools\XAMPP\htdocs`
 
@@ -207,8 +201,8 @@ Il codice _PHP_ può essere inserito direttamente nel file _HTML_, tramite il ta
 
 In questo caso qualsiasi codice all'interno del tag che si trova fuori dal documento stesso, ha in automatico **echo** al client.
 
-```html
-<?php 
+```php
+<?php
     "ABC";
 ?>
 
@@ -225,7 +219,7 @@ In questo caso qualsiasi codice all'interno del tag che si trova fuori dal docum
 <div class="grid2">
 <div>
 
-```html
+```php
 <?php
     $user = "Randy";
 ?>
@@ -246,7 +240,7 @@ In questo caso qualsiasi codice all'interno del tag che si trova fuori dal docum
 
 <p style="text-align: center">Tradotto in:</p>
 
-```php
+```html
 <?php
 <!DOCTYPE html>
 <html>
@@ -268,7 +262,6 @@ Anche se è possibile inserire tutto in un unico file html, l'approccio corretto
 `display-artist.php`
 
 ```php
-<?php
 <?php
     include "php/classes/artistCollection.php"
     include "php/classes/artist.php"
@@ -295,7 +288,6 @@ Anche se è possibile inserire tutto in un unico file html, l'approccio corretto
 
 ```php
 <?php
-<?php
 class ArtistCollection{
     private $collection = array();
 
@@ -316,7 +308,6 @@ class ArtistCollection{
 `artist.php`
 
 ```php
-<?php
 <?php
 class Artist{
     var $Id;
@@ -468,7 +459,7 @@ else{
 }
 ```
 
-```html
+```php
 <?php
     if( $userStatus == "loggedIn"){
         echo // ...
@@ -519,7 +510,7 @@ In questa sintassi, le parentesi graffe vengono sostituite:
 - `{` $\to$ `:`
 - `}` $\to$ `endif;`, `endwhile;`, `endfor;`, `endforeach;`, `endswitch;`.
 
-```html
+```php
 <?php if($userStatus == "loggedIn") : ?>
 <a href="account.php">Account</a>
 <a href="logout.php">Logout</a>
@@ -2263,7 +2254,7 @@ $statement->bindValue(1, $searchFor);
 $statement->execute();
 ```
 
-```html
+```php
 <input
   type="search"
   name="<?php echo SEARCHBOX; ?>"

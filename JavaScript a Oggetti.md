@@ -636,7 +636,6 @@ console.log(v);
 Una lista dei metodi principali per gli array:
 
 <div class="flexbox" markdown="1">
-<span>
 
 |    Metodo    |                 Argomenti                 |                                                                                                               Descrizione                                                                                                               |
 | :----------: | :---------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -653,7 +652,6 @@ Una lista dei metodi principali per gli array:
 | `toString()` |                     /                     |                                                                                            Converte l'array in una stringa e la restituisce                                                                                             |
 | `valueOf()`  |                     /                     |                                                                                                 Converte i valori primitivi dell'array                                                                                                  |
 
-</span>
 </div>
 
 Per quanto riguarda la `sort(sortFun)`, la funzione `sortFun(a, b)` deve avere come ritorno un valore che può essere:
@@ -1481,7 +1479,6 @@ Infatti è adesso riferito al contesto lessicale nel quale si trova.
 ### 2.2.3. Funzioni predefinite
 
 <div class="flexbox" markdown="1">
-<span>
 
 |         Nome Funzione         |                                         Descrizione                                          | Esempio                                                                 |       Output        |
 | :---------------------------: | :------------------------------------------------------------------------------------------: | ----------------------------------------------------------------------- | :-----------------: |
@@ -1492,7 +1489,6 @@ Infatti è adesso riferito al contesto lessicale nel quale si trova.
 |     `parseFloat(string)`      |        Trasforma una stringa in un numero float, se non è possibile restituisce `NaN`        | `console.log(parseFloat(3.4))`                                          |        `3.4`        |
 | `Number(obj)` e `String(obj)` | Converte l'argomento dell'oggetto in un numero/stringa. Se non è possibile restituisce `NaN` |                                                                         |                     |
 
-</span>
 </div>
 
 ## 2.3. _Regole di Scope_
@@ -1633,7 +1629,6 @@ Un nodo rappresenta un elemento HTML contanuto tra `<>` e `</>`
 Alcune proprietà essenziali dei nodi sono:
 
 <div class="flexbox" markdown="1">
-<span>
 
 |    Proprietà     |             Descrizione             |
 | :--------------: | :---------------------------------: |
@@ -1647,7 +1642,6 @@ Alcune proprietà essenziali dei nodi sono:
 |   `nodeValue`    |           Valore del nodo           |
 |   `parentNode`   |             Nodo padre              |
 
-</span>
 </div>
 
 L'intero _DOM_ di trova nell'oggetto `document`, che contiene tutte le informazioni della pagina.
@@ -1683,7 +1677,6 @@ Esistono altri due metodi più moderni:
 Ci sono alacune proprietà dei nodi che sono <u>**essenziali**</u>:
 
 <div class="flexbox" markdown="1">
-<span>
 
 |   Proprietà   |                                                    Descrizione                                                     |
 | :-----------: | :----------------------------------------------------------------------------------------------------------------: |
@@ -1695,13 +1688,11 @@ Ci sono alacune proprietà dei nodi che sono <u>**essenziali**</u>:
 |    `style`    |                   Ritorna una _CSSStyleDeclaration obj_ che contiene le sotto-proprietà del tag                    |
 |   `tagName`   |                                           Il nome del tag dell'elemento                                            |
 
-</span>
 </div>
 
 Altre proprietà invece sono specifiche per alcuni tag:
 
 <div class="flexbox" markdown="1">
-<span>
 
 | Proprietà |                   Descrizione                    |                    Tag                     |
 | :-------: | :----------------------------------------------: | :----------------------------------------: |
@@ -1710,7 +1701,6 @@ Altre proprietà invece sono specifiche per alcuni tag:
 |   `src`   |       Identifica un link ad un URL esterno       | `<img>`, `<input>`, `<iframe>`, `<script>` |
 |  `value`  | Da accesso all'attrbuto `value` dei tag di input |    `<input>`, `<textarea>`, `<submit>`     |
 
-</span>
 </div>
 
 ```html
@@ -1823,7 +1813,6 @@ Abbiamo già detto che la proprietà `innerHTML` è fortemente scoraggiata.
 Invece è consigliato l'utilizzo in combinazione di `textContent` e _metodi di manipolazione_
 
 <div class="flexbox" markdown="1">
-<span>
 
 |         Metodo          |                                       Descrizione                                        |
 | :---------------------: | :--------------------------------------------------------------------------------------: |
@@ -2037,7 +2026,6 @@ Ci sono diversi tipi di eventi che possono essere _triggerati_, i più comuni so
 I più comuni sono:
 
 <div class="flexbox" markdown="1">
-<span>
 
 |   Evento    |                     Descrizione                     |
 | :---------: | :-------------------------------------------------: |
@@ -2049,7 +2037,6 @@ I più comuni sono:
 | `mouseout`  |      Il mouse si è spostato via da un elemento      |
 | `mousemove` | Il mouse è stato spostato mentre era su un elemento |
 
-</span>
 </div>
 
 ##### 2.4.4.1.2. Eventi da Tatsiera
@@ -2057,7 +2044,6 @@ I più comuni sono:
 Sono spesso ingorati, ma possono essere strumenti potenti.
 
 <div class="flexbox" markdown="1">
-<span>
 
 |  Evento   |                                   Descrizione                                   |
 | :-------: | :-----------------------------------------------------------------------------: |
@@ -2070,7 +2056,6 @@ Sono spesso ingorati, ma possono essere strumenti potenti.
 | `select`  |         Quando l'uutente selezione del testo (prevenire copia/incolla)          |
 | `submit`  | Quando un `form` viene inviato. Può essere utilizzato per fare _prevalidazione_ |
 
-</span>
 </div>
 
 ```js
@@ -2094,7 +2079,6 @@ document.querySelector("#loginForm").addEventListener("submit", function (e) {
 ##### 2.4.4.1.3. Eventi Media
 
 <div class="flexbox" markdown="1">
-<span>
 
 |     Evento     |                      Descrizione                      |
 | :------------: | :---------------------------------------------------: |
@@ -2104,13 +2088,11 @@ document.querySelector("#loginForm").addEventListener("submit", function (e) {
 |  `ratechange`  |       Quando la velocità di riproduzione cambia       |
 | `volumechange` |                Quando cambia il volume                |
 
-</span>
 </div>
 
 ##### 2.4.4.1.4. Eventi di Frame
 
 <div class="flexbox" markdown="1">
-<span>
 
 |       Evento        |                                       Descrizione                                       |
 | :-----------------: | :-------------------------------------------------------------------------------------: |
@@ -2123,7 +2105,6 @@ document.querySelector("#loginForm").addEventListener("submit", function (e) {
 |      `scroll`       |                        Quando il _document view_ viene scrollato                        |
 |      `unload`       |                           Quando il documento viene svuotato                            |
 
-</span>
 </div>
 
 Questi eventi possono essere utilizzati in contesi di _Lazy Loading_.
