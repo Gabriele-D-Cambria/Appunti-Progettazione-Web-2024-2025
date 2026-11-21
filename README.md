@@ -51,6 +51,15 @@ Il progetto deve seguire le seguenti specifiche:
 - Consegna tramite Google Form, zippare la cartella principale
 - Database da esportare tramite script salvato come: `"cognome_numerodimatricola"`
 
+### Il Mio Progetto
+
+È possible consultare il mio progetto (30L)
+[sul mio repository dedicato](https://github.com/Gabriele-D-Cambria/Titles-a-pweb-project).
+
+N.B. Il mio progetto è oggettivamente più grande di quello che richiede l'esame,
+tuttavia credo possa essere comunque un buon riferimento pratico anche per capire
+come implementare certi aspetti.
+
 ## 🎯 Struttura del Corso
 
 Argomenti:
